@@ -1,0 +1,38 @@
+/* start footre */
+.footer {
+    padding: 10px;
+    width: 100%;
+    min-height: 56px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @media (max-width: 400px) {
+        flex-direction: column-reverse;
+    }
+    h3 {
+        font-size: 28px;
+        margin: 0;
+        @media (max-width: 400px) {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    }
+    .to-up {
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 9px;
+        background-color: $secound-main-color;
+        transition: $main-transition;
+        &:hover {
+            @include prefixer(box-shadow, 0 0 10px $secound-main-color, ms o);
+        }
+        i {
+            font-size: 20px;
+            color: $main-color;
+        }
+    }
+}
+/* End footre */

@@ -1,0 +1,49 @@
+/* Start Global Rules */
+/* Import font google */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,700;0,800;1,300;1,400;1,700&display=swap");
+* {
+  // font-family: 'Cairo', sans-serif;
+  @include prefixer(font-family, "Cairo" , ms o moz webkit);
+  @include prefixer(box-sizing, border-box, ms o);
+  scroll-behavior: smooth;
+  transition: 0.2s;
+}
+body {
+  background-color: $main-color;
+  color: #fff;
+  border-left: 2px solid $secound-main-color;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+span {
+  color: $secound-main-color;
+}
+a {
+  text-decoration: none;
+}
+.section {
+  padding-top: $section-padding-top;
+  padding-bottom: $section-padding-bottom;
+  min-height: 100vh;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 238, 255, 0.267);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: $secound-main-color;
+}
+/* End Global Rules */

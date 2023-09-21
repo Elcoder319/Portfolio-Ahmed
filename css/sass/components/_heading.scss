@@ -1,0 +1,63 @@
+.main-title {
+    font : {
+        size: 30px;
+        weight: 500;
+    }
+    margin: 10px auto 70px;
+    border: solid 2px $secound-main-color;
+    width: fit-content;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+    transition: $main-transition;
+    text-transform: uppercase;
+    &:hover {
+        color: #fff;
+        transition-delay: $main-transition;
+    }
+    &:hover {
+        &::before {
+            animation: to-left 0.4s forwards linear;
+        }
+    }
+    &:hover {
+        &::after {
+            animation: to-right 0.4s forwards linear;
+        }
+    }
+    &::before {
+        @extend %source-heading;
+        left: -26px;
+    }
+    &::after {
+        @extend %source-heading;
+        right: -26px;
+    }
+}
+
+%source-heading-b-a {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: #ada9a9;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.heading {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #75757565;
+    position: relative;
+    font-size: 40px;
+    @include prefixer(border, solid 1px #ddd, ms o webkit moz);
+    &::before {
+        @extend %source-heading-b-a;
+        left: -100px;
+    }
+    &::after {
+        @extend %source-heading-b-a;
+        right: -100px;
+    }
+}
